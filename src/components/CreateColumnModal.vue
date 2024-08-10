@@ -31,8 +31,8 @@ const CreateColumnSubmit = (e) => {
 
 const closeCreateBoardModal = () => {
   document.getElementById('create_column').close();
-  //window.location.reload();
-  router.reload();
+  window.location.reload();
+  //router.reload();
 };
 
 </script>

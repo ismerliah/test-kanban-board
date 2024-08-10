@@ -124,8 +124,8 @@ const showCreateTaskModal = (columnId) => {
 const closeCreateTaskModal = () => {
   document.getElementById('create_task').close();
   currentColumnId = null;
-  router.reload();
-  //window.location.reload();
+  //router.reload();
+  window.location.reload();
 };
 </script>
 
