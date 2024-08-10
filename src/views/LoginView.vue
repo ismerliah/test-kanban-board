@@ -64,7 +64,8 @@ const handlesubmit = (e) => {
 
     if (email && password && storedUser && storedUser.email && storedUser.username && storedUser.password) {
         localStorage.setItem('isLoggedIn', true);
-        window.location.href = '/home';
+        //window.location.href = '/home';
+        router.push('/home');
     } else {
         alert('Invalid email or password');
     }

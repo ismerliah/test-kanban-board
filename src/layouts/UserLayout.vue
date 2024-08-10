@@ -40,7 +40,8 @@ const logout = () => {
     LoggedIn.value = false;
     localStorage.removeItem('user');
     localStorage.removeItem('isLoggedIn');
-    window.location.href = "/";
+    //window.location.href = "/";
+    router.push('/');
 };
 </script>
 

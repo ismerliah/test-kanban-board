@@ -65,6 +65,7 @@
 
 <script setup>
 import UserLayout from '@/layouts/UserLayout.vue';
+import router from '@/router';
 
 const handlesubmit = (e) => {
     e.preventDefault();
@@ -81,7 +82,8 @@ const handlesubmit = (e) => {
     
     if (storedUser && storedUser.email && storedUser.username && storedUser.password) {
         alert("Complete user data!");
-        window.location.href = '/login';
+        //window.location.href = '/login';
+        router.push('/login');
     } else {
         alert("Missing user data!");
     }
