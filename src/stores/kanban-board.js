@@ -21,3 +21,14 @@ export function addTaskToColumn(columnId, taskName, taskDescription) {
         taskDescription,
     });
 }
+
+export function deleteColumn(columnId) {
+    BOARD.value = BOARD.value.filter((column) => column.columnId !== columnId);
+}
+
+export function deleteTask(columnId, taskId) {
+    const column = BOARD.value.find((column) => column.columnId === columnId);
+    if (column) {
+        column.tasks = column.tasks.filter((task) => task.taskId !== taskId);
+    }
+}
