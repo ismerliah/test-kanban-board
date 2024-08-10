@@ -2,7 +2,7 @@
     <div class="container mx-auto">
         <div class="navbar bg-base-100">
             <div class="flex-1">
-                <RouterLink to="/" class="btn btn-ghost text-xl">Kanban Board</RouterLink>
+                <RouterLink :to="LoggedIn ? '/home' : '/'" class="btn btn-ghost text-xl">Kanban Board</RouterLink>
             </div>
             <div class="flex-none gap-2">
                 <RouterLink to="/login" class="btn btn-sm" v-if="!LoggedIn">Log In</RouterLink>

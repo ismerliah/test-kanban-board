@@ -4,6 +4,7 @@ import LoginView from '@/views/LoginView.vue'
 import StartView from '@/views/StartView.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
+import Board from '@/components/Board.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
