@@ -1,13 +1,17 @@
 <template>
     <UserLayout>
       <div class="hero bg-base-200 min-h-screen">
-        <div class="hero-content text-center">
-          <div class="max-w-md">
+        <div class="hero-content max-w-md flex flex-col">
+          <div class="text-center">
             <h1 class="text-5xl font-bold">Kanban Board</h1>
+          </div>
+          <div class="text-justify">
             <p class="py-6">
-              Managing homework can be overwhelming, especially when you have multiple assignments with different deadlines.
+              A kanban board is an agile project management tool designed to help visualize work, limit work-in-progress, and maximize efficiency (or flow). It can help both agile and DevOps teams establish order in their daily work.
             </p>
-            <RouterLink to="/login" class="btn btn-primary">Get Started</RouterLink>
+            <div class="text-center">
+              <RouterLink to="/login" class="btn btn-outline bg-navy text-neutral-100 font-roboto">GET STARTED</RouterLink>
+            </div>
           </div>
         </div>
       </div>

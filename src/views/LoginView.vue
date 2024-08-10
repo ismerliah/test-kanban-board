@@ -1,18 +1,18 @@
 <template>
     <UserLayout>
-        <div class="h-screen ">
-            <div class="flex flex-col justify-center items-center">
+        <div class="h-screen bg-base-200 font-roboto">
+            <div class="h-full flex flex-col justify-center items-center">
                 <div class="bg-white rounded-3xl border-y-indigo-950 shadow-lg mt-10 p-12 md:w-2/5">
                     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                         <h2 class="text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
-                            Log In
+                            LOG IN
                         </h2>
                     </div>
 
                     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                         <form @submit="handlesubmit" class="space-y-7">
                             <div>
-                                <label class="input input-bordered flex items-center gap-2">
+                                <label class="input input-bordered input-secondary flex items-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                         class="h-4 w-4 opacity-70">
                                         <path
@@ -25,7 +25,7 @@
                             </div>
 
                             <div>
-                                <label class="input input-bordered flex items-center gap-2">
+                                <label class="input input-bordered input-secondary flex items-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                         class="h-4 w-4 opacity-70">
                                         <path fill-rule="evenodd"
@@ -37,13 +37,13 @@
                             </div>
 
                             <div>
-                                <button class="btn btn-neutral flex w-full justify-center rounded-md">Log In</button>
+                                <button class="btn btn-neutral flex w-full justify-center rounded-md">LOG IN</button>
                             </div>
                         </form>
 
                         <p class="mt-10 text-center text-sm text-gray-500">
                             Do not have an account?
-                            <RouterLink to="/register" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Register</RouterLink>
+                            <RouterLink to="/register" class="font-semibold leading-6 text-maroon">Register</RouterLink>
                         </p>
                     </div>
                 </div>
@@ -60,13 +60,13 @@ const handlesubmit = (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    console.log(email , password);  
-    localStorage.getItem('email', email);
-    localStorage.getItem('password', password);
-    localStorage.setItem('isLoggedIn', true);
+    const storedUser = JSON.parse(localStorage.getItem('user')); 
 
-    if (localStorage.getItem('email') && localStorage.getItem('password')) {
+    if (email && password && storedUser && storedUser.email && storedUser.username && storedUser.password) {
+        localStorage.setItem('isLoggedIn', true);
         window.location.href = '/home';
+    } else {
+        alert('Invalid email or password');
     }
 }
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <dialog id="create_column" class="modal">
+        <dialog id="create_column" class="modal font-roboto">
             <div class="modal-box">
                 <form method="dialog">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
@@ -9,9 +9,9 @@
                 <form @submit="CreateColumnSubmit">
                     <h3 class="text-lg font-bold">Add New Board</h3>
                     <p class="pt-5 pb-2">Name</p>
-                    <input type="text" id="columnName" class="input input-bordered input-sm w-full max-w-xs" />
+                    <input type="text" id="columnName" class="input input-bordered input-sm w-full max-w-md" />
                     <div class="flex justify-end mt-4">
-                        <button class="btn btn-sm btn-primary">Create</button>
+                        <button class="btn btn-neutral btn-sm">Create</button>
                     </div>
                 </form>
             </div>
